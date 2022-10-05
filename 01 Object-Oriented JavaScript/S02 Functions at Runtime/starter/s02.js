@@ -284,3 +284,12 @@ console.log(decrease());
 console.log(decrease());
 console.log(decrease());
 console.log(decrease());
+
+const test_array = Array(10);
+
+const p_tag = document.createElement("p");
+p_tag.innerHTML = `${test_array}`;
+
+const n1 = document.getElementById("test");
+console.log(n1);
+n1.appendChild(p_tag);
