@@ -26,6 +26,37 @@ const conv = (x) => `The output is: ${x}`;
 
 console.log(conv(mul(add(2, 3))));
 
+//imperative
+
+let a = 2;
+let b = 3;
+let c = a + b;
+let d = c * 5;
+let e = `The result of the imperative program is: ${d}`;
+console.log(e);
+
+//Object Oriented
+
+class Operations {
+  add(a, b) {
+    return a + b;
+  }
+
+  mul(x) {
+    return 5 * x;
+  }
+
+  conv(num) {
+    return `The result of the OO program is: ${num}`;
+  }
+}
+
+const op = new Operations();
+const r1 = op.add(2, 3);
+const r2 = op.mul(r1);
+const r3 = op.conv(r2);
+console.log(r3);
+
 //map, filter, reduce, includes, find, forEach
 const arr = [1, 2, 3, 4, 5];
 
@@ -61,3 +92,32 @@ function myMap(arr, cb) {
   }
   return output;
 }
+
+//Our own defined Filter
+
+Array.prototype.myFilter = function (cb) {
+  const ArrCopy = [...this];
+  const result = [];
+
+  return (function rec(cbArray) {
+    if (cbArray.length === 0) return result;
+    if (cb(cbArray[cbArray.length - 1], cbArray.length - 1, this))
+      result.unshift(cbArray[cbArray.length - 1]);
+    cbArray.pop();
+    return rec(cbArray);
+  })(ArrCopy);
+};
+
+//Our own defined Reduce
+
+Array.prototype.myReduce = function (cb, initial) {
+  const ArrCopy = [...this];
+  let total = initial;
+
+  return (function rec(cbArray) {
+    if (cbArray.length === 0) return total;
+    total = cb(total, cbArray[cbArray.length - 1], cbArray.length - 1, this);
+    cbArray.pop();
+    return rec(cbArray);
+  })(ArrCopy);
+};
