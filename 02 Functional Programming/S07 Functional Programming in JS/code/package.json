@@ -1,0 +1,12 @@
+{
+  "name": "todo-redux",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build && cp manifest.json dist/"
+  },
+  "devDependencies": {
+    "gitignore": "^0.7.0",
+    "parcel": "latest"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Intermediate JavaScript ToDo",
+  "version": "1.0.0",
+  "description": "Add and remove tasks",
+  "manifest_version": 3,
+  "author": "Ismail AlKamal",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Todo App"
+  }
+}
