@@ -1,0 +1,21 @@
+{
+  "name": "fifa-slackbot",
+  "version": "1.0.0",
+  "description": "fifa bot for slack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ismail AlKamal",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.8.0",
+    "axios": "^1.1.3",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "gitignore": "^0.7.0"
+  }
+}
